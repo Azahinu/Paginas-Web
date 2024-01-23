@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kassar Parra</title>
+    <link rel="shortcut icon" href="./images/favicon2.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.CSS">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+<body>
+    
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__title">Dental Kassar Parra</h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Inicio</a>
+                </li>
+
+                <li class="nav__items">
+                    <a href="#nosotros" class="nav__links">Acerca de</a>
+                </li>
+
+                <li class="nav__items">
+                    <a href="#contacto" class="nav__links">Contacto</a>
+                </li>
+
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Blog</a>
+                </li>
+
+                <img src="./images/close.svg" class="nav__close" alt="">
+
+            </ul>
+
+            <div class="nav__menu">
+                <img src="./images/menuRight.svg" class="nav__img">
+            </div>
+        </nav>
+
+        <section class="hero__container container" id="nosotros">
+        <h1 class="hero__title">Dental Kassar Parra</h1>
+        <p class="hero__paragraph">Somos un consultorio con ganas de expandirnos por el mundo y dominarlo</p> 
+        <a href="#" class="cta">Saca tu cita!</a>  
+        </section>
+    </header>
+
+    <main>
+        <section class="container about">
+            <h2 class="subtitle">Quienes Somos</h2>
+            <p class="about__paragraph">Somos un duo de doctores fantasticos con ganas de consquistar el mundo </p>
+            
+            
+            <div class="about__main">
+                <article class="about__icons">
+                    <img src="./images/document.svg" class="about__icon">
+                    <h3 class="about__title">Misión</h3>
+                    <p>Indicar mision de Dental Kassar parra</p>
+                </article>
+
+                <article class="about__icons">
+                    <img src="./images/piece.svg" class="about__icon">
+                    <h3 class="about__title">Vision</h3>
+                    <p>Indicar Vision de Dental Kassar parra</p>
+                </article>
+            </div>
+        </section>  
+        
+        <div class="slider-container">
+           <div class=" mySlides fade">
+                <div class="numbertext"> 1/3</div>
+                <img src="./images/face.jpg" style="width: 100%">
+           </div>
+           <div class=" mySlides fade">
+                <div class="numbertext"> 2/3</div>
+                <img src="./images/face2.jpg" style="width: 100%">
+           </div>
+           <div class=" mySlides fade">
+                <div class="numbertext"> 3/3</div>
+                <img src="./images/face3.jpg" style="width: 100%">
+           </div>
+           <a class="prev" onclick="plusSlides (-1)">&#10094;</a>
+           <a class="next" onclick="plusSlides (1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align: center;">
+            <span class="dot" onclick="currentSlides(1)"></span>
+            <span class="dot" onclick="currentSlides(2)"></span>
+            <span class="dot" onclick="currentSlides(3)"></span>
+
+        </div>
+
+
+        <section class="container reseñas" id="reseña">
+            <h2 class="subtitle" style="text-align: center;">Reseñas</h2>
+            <div class='sk-ww-google-reviews' data-embed-id='249241'>
+            <script src='https://widgets.sociablekit.com/google-reviews/widget.js' async defer>
+            </script>  
+        </div>
+        </section>   
+
+
+        <section class="container contacto" id="contacto">
+            <h2 class="subtitle">Contactanos</h2>
+            <p class="about__paragraph">+57 XXXXXXXX</p>
+        </section>
+
+
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>Kassar Parra</h4>
+                    <ul>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Nuestros Servicios</a></li>
+                        <li><a href="#">Politicad de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Ayuda</h4>
+                    <ul>
+                        <li><a href="#">Contactanos</a></li>
+                        <li><a href="#">Correo</a></li>
+                        <li><a href="#">Reseñas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Siguenos</h4>
+                    <div class="social-link">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <script src="./js/script.js" ></script>
+</body>
+
+
+</html>
