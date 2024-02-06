@@ -1,5 +1,5 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 
 *{
     box-sizing: border-box;
@@ -9,7 +9,7 @@
 
 :root{
     --padding-container: 100px 0;
-    --color-title: #001a49;
+    --color-title:  rgba(217, 172, 23, 0.897);
 
 
 }
@@ -47,9 +47,14 @@ body{
     width: 100%;
     height: 100%;
     background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../images/dental.jpg');
-    background-size: cover;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 80%, 0 80%);
+    background-size: 1350px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 90%, 0 90%);
     z-index: -1;
+    
+    
 
 }
 
@@ -125,7 +130,7 @@ body{
 
 .cta{
     display: inline-block;
-    background-color: #2091f9;
+    background-color: rgba(217, 172, 23, 0.897);
     justify-self: center;
     color: #fff;
     text-decoration: none;
@@ -148,6 +153,8 @@ body{
 
 .about__paragraph{
     line-height: 1.7;
+    font-family: Arial;
+    
 }
 
 .about__main{
@@ -188,24 +195,44 @@ body{
 
 .mySlides{
     display: none;
+    /*clip-path: inset(28% 0 45% 0);*/
+    position: relative;
+  /*  margin-bottom: -65%;
+    margin-top: -42%;*/
 }
-
 img{
-    vertical-align: middle;
+    align-items: center;
 }
 
 .slider-container{
-    max-width: 80%;
-    position: relative;
     margin: auto;
+    position: relative;
+    background-color: #000;
+    
 }
+
+.img_carrusel{
+    width: 100%;
+    margin-bottom: -3px;
+}
+
+@media (min-width: 1200px){
+    .img_carrusel{
+        width: 100%;
+        height: 550px;
+        object-fit: contain;
+        object-position: center;
+    }
+
+}
+
 .next, .prev{
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    
     width: auto;
     padding: 16px;
-    margin-top: -22px;
+    margin-top: -320px;
     color: white ;
     font-weight: bold;
     font-size: 18px;
@@ -281,6 +308,47 @@ img{
         width: 10px;
     }
 }
+@media (max-width: 500px){
+    .prev, .next{
+            margin-top: -120px;
+    }
+    .hero::before{
+        margin-top: -120px;
+        background: black;
+        background-size:450px ;
+        background-position-y: center;
+        background-position-x: center;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../images/dental.jpg');
+    }
+}
+@media (max-width: 800px){
+    .nav__menu{
+        display: block;
+
+    }
+    .nav__link--menu{
+        position: fixed;
+        background-color: #000;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 100;
+        opacity: 0;
+        pointer-events: none;
+        transition: .7s opacity;
+    }
+    .nav__link--show{
+        --show: block;
+        opacity: 1;
+        pointer-events: unset;
+    }
+}
 
 
 /*Footer*/
@@ -347,4 +415,194 @@ img{
         margin-bottom: 30px;
     }
 }
+
+/*Quienes Somos*/
+
+.testimony{
+    background-color: hsla(240, 18%, 85%, 0.796);
+}
+
+.testimony__container{
+    display: grid;
+    gap: 1em;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.testimony__body{
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    
+    
+}
+
+.testimony_img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 30%;
+    background-color: hsla(240, 18%, 85%, 0.796);;
+     
+}
+
+.testimony_texts{
+    margin-left: 20%;
+    
+    
+}
+
+@media (max-width: 400px){
+
+    .testimony_texts{
+        margin: 0;
+        margin-right: 0;
+        justify-content: center
+
+    }
+
+    .testimony_img{
+        margin-left: 12%;
+    }
+
+    .testimony__body{
+        margin-left: -10px;
+    }
+    
+}
+
+/*Mapa*/
+
+.mapa{
+    justify-content: center;
+    align-items: center ;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    padding: 50px;
+    background-color: hsla(240, 18%, 85%, 0.796);
+    margin-top: 25px;
+}
+
+.container_mapa{
+    margin-left: 100px;
+}
+
+.ubicacion{
+    margin-left: 200px;
+}
+
+@media (max-width: 800px){
+    .container_mapa{
+        margin-left: 55px;
+    }
+
+    .ubicacion{
+        margin-left: 50px;
+        margin-bottom: 15%;
+        align-items: center;
+    }
+
+    .paragrafo_mapa{
+        margin-left: 50px;
+        margin-top: 5%;
+    }
+
+
+}
+
+/*Division*/
+.division{
+    
+    width: 100%;
+    height:250px;
+    margin-top: -1px;
+    margin-bottom: -230px;
+    background-color: rgba(217, 172, 23, 0.897);;
+
+}
+
+/*Tratamientos*/
+
+.container_tratamientos{
+    position: static;
+    text-align: center;
+    margin-top: 0;
+    background-color: rgb(37, 37, 36);
+    padding: 8%;
+    border-radius: 5%;
+    
+}
+
+.allElements{
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, .5fr));
+    justify-content: center;
+    align-content: center;
+    padding-inline-start: 6%;
+    gap: 2em;
+    margin-top: 10%;
+    
+}
+
+
+.table{
+    padding-top: 60px;
+    background-color:hsla(46, 65%, 60%, 0.945);;
+    text-align: center;
+    border-radius: 8%;
+    width: 330px;
+    
+    
+}   
+
+.nombreProceso{
+    color: black;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.info{
+    align-items: center;
+    padding: 20px;
+}
+
+.info_parrafo{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+@media (max-width: 800px){
+    .allElements{
+        padding-inline-start: 0;
+    }
+}
+
+/*Reseñas*/
+.container_reseñas{
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, .6fr));
+    justify-content: center;
+    padding: -10px;
+}
+
+/*Imagenes Tratamientos*/
+.img_tratamientos{
+    width: 100%;
+    display: block;
+    border-radius: 10%;
+    margin-top: -62px;
+    margin-bottom: 20px;
+}
+
+
+
+
 
